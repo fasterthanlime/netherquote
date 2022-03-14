@@ -1,0 +1,19 @@
+[package]
+name = "netherquote"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+color-eyre = "0.6.1"
+knuffel = "1.1.0"
+miette = { version = "3.3.0", features = ["fancy"] }
+serde = { version = "1.0.136", features = ["derive"] }
+parse-display = "0.5.4"
+
+[profile.release]
+# I like incremental builds, even in release
+incremental = true
+# I find debug = 2/true excessive
+debug = 1
